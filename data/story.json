@@ -86,7 +86,7 @@
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "Show message: \n1. Gracias por llegar tan rápido, Val. \n2. Tengo algo importante que encargarte.\r\n3. Hoy es la coronación de la nueva reina, Mipha, \ny necesitamos llevarle un regalo de parte nuestra. \r\n4. Entra al taller, escoge la escultura que más te \nguste y llévala de inmediato a la ceremonia."
+          "data": "Show message:. Gracias por llegar tan rápido, Val. Tengo algo importante que encargarte, Hoy es la coronación de la nueva reina, Mipha, y necesitamos llevarle un regalo de parte nuestra. Entra al taller, escoge la escultura que más te guste y llévala de inmediato a la ceremonia."
         },
         {
           "type": "DESC",
