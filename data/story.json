@@ -1,0 +1,669 @@
+{
+  "rootTopicKey": "f73a4b1f-1c1c-45be-89d9-08ef256cfec9",
+  "editorRootTopicKey": "f73a4b1f-1c1c-45be-89d9-08ef256cfec9",
+  "focusKey": "59473fad-b00b-4721-8e33-a5734c28ba58",
+  "extData": {
+    "TOPIC_REFERENCE": {
+      "reference": {
+        "f1117462-21e5-4e1d-ac8b-416b6e4601e0": {
+          "keyList": ["1bba4f77-2581-445b-b942-3f117ef7729d"],
+          "dataMap": {}
+        },
+        "5f7d1e29-713b-4497-940f-1af155f918c6": {
+          "keyList": ["85e3638c-05a0-4336-8295-8b052b1fb782"],
+          "dataMap": {}
+        },
+        "c9230d0d-9a53-4f26-98af-fc836c71eb57": {
+          "keyList": ["1bba4f77-2581-445b-b942-3f117ef7729d"],
+          "dataMap": {}
+        },
+        "596fa2be-f536-4433-b0ff-c157fd6dbfa5": {
+          "keyList": ["88b2a741-3980-42ef-8d20-9c917ae30d4b"],
+          "dataMap": {}
+        }
+      }
+    }
+  },
+  "topics": [
+    {
+      "key": "0df2f5f4-5ce6-43c5-9671-78f9acefca3f",
+      "parentKey": "16717297-4c58-4f83-ad41-6445619a59fa",
+      "subKeys": ["9acca0b9-76e7-4cb9-802e-5e80e249bf52"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Graphics for the menu showing\nthe video lessons and notes unlocked."
+        }
+      ]
+    },
+    {
+      "key": "dda1f930-371b-4d4b-8ddc-3eb5c1e85782",
+      "parentKey": "89d109a0-2b30-417b-98c1-756fe80fba78",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player chooses right door,\nContinue to Pronunciation activity"
+        }
+      ]
+    },
+    {
+      "key": "d389231b-d214-409e-bfaf-a7febf327574",
+      "parentKey": "e011d2ee-b8d3-419c-8366-5841d92724ee",
+      "subKeys": ["063f730b-3e20-45fb-aeb6-8edc408a67dc"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *Atestar*,\nMake attestation and add graphics\nof button glowing. (pending Emma)"
+        }
+      ]
+    },
+    {
+      "key": "a7b7051a-d0e2-4467-b653-8bd65bb7bdd2",
+      "parentKey": "31f5b119-10f4-431f-a260-35d5b34ff780",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *museum*,\nshow message:\nEl museo está cerrado. Parece \nque todos se fueron a la coronación."
+        }
+      ]
+    },
+    {
+      "key": "c914290f-2ce3-4418-a674-17a27ba942aa",
+      "parentKey": "e3c43fe5-a9c2-4942-8397-922710f1ec1a",
+      "subKeys": ["85e3638c-05a0-4336-8295-8b052b1fb782"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Show message: \n1. Gracias por llegar tan rápido, Val. \n2. Tengo algo importante que encargarte.\r\n3. Hoy es la coronación de la nueva reina, Mipha, \ny necesitamos llevarle un regalo de parte nuestra. \r\n4. Entra al taller, escoge la escultura que más te \nguste y llévala de inmediato a la ceremonia."
+        },
+        {
+          "type": "DESC",
+          "data": "Are these messages better done as:\n1. A sequence of images where the dialogue is seen as air bubbles with the map as the background? or 2. As notifications in the app?\n\n\n"
+        }
+      ]
+    },
+    {
+      "key": "746cdb5c-6d3c-43d1-ad1b-0cee4c6a0117",
+      "parentKey": "5f050da7-ccdc-4c5f-b17e-83c6d5981c05",
+      "subKeys": ["f1117462-21e5-4e1d-ac8b-416b6e4601e0"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *rug*\nShow message:\n“¡AUCH!” \n\nAntes de poder \npensar qué querrá papá, \nte tropiezas con la alfombra \ny peleas contra la gravedad \nhasta terminar en la puerta \ny recuperar tu balance."
+        },
+        {
+          "type": "DESC",
+          "data": "Can this eventually be made better by using AI responses so as to not make it always the same exact dialogue? "
+        }
+      ]
+    },
+    {
+      "key": "5f7d1e29-713b-4497-940f-1af155f918c6",
+      "parentKey": "b9b16b46-c094-42ce-af67-173f3908fccd",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door*, \nshow image /MapDownstairs2"
+        }
+      ]
+    },
+    {
+      "key": "c9230d0d-9a53-4f26-98af-fc836c71eb57",
+      "parentKey": "1fb1c2b0-0d74-4f13-ba4d-2a1aa92c7c78",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door*, \nshow image /MapDownstairs"
+        }
+      ]
+    },
+    {
+      "key": "1fb1c2b0-0d74-4f13-ba4d-2a1aa92c7c78",
+      "parentKey": "1bba4f77-2581-445b-b942-3f117ef7729d",
+      "subKeys": ["c9230d0d-9a53-4f26-98af-fc836c71eb57"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door 2* (door next to door 1),\nshow image /DadRoom"
+        }
+      ]
+    },
+    {
+      "key": "b9b16b46-c094-42ce-af67-173f3908fccd",
+      "parentKey": "85e3638c-05a0-4336-8295-8b052b1fb782",
+      "subKeys": ["5f7d1e29-713b-4497-940f-1af155f918c6"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door 2* (door next to door 1),\nshow image /DadRoom"
+        }
+      ]
+    },
+    {
+      "key": "89d109a0-2b30-417b-98c1-756fe80fba78",
+      "parentKey": "063f730b-3e20-45fb-aeb6-8edc408a67dc",
+      "subKeys": [
+        "ce08f869-5b30-4e71-8617-7336cda7dd6b",
+        "dda1f930-371b-4d4b-8ddc-3eb5c1e85782"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Fade in to /MapDungeon" }]
+    },
+    {
+      "key": "98f74305-ba4c-4ae2-9e6d-561ca2f17e8a",
+      "parentKey": "85e3638c-05a0-4336-8295-8b052b1fb782",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *main door* (door on right side of map),\nshow message: \nNo puedo salir de casa sin la escultura. Val... ¡enfócate!"
+        }
+      ]
+    },
+    {
+      "key": "063f730b-3e20-45fb-aeb6-8edc408a67dc",
+      "parentKey": "d389231b-d214-409e-bfaf-a7febf327574",
+      "subKeys": ["89d109a0-2b30-417b-98c1-756fe80fba78"],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Show /StoryVideo2 " }]
+    },
+    {
+      "key": "85e3638c-05a0-4336-8295-8b052b1fb782",
+      "parentKey": "c914290f-2ce3-4418-a674-17a27ba942aa",
+      "subKeys": [
+        "dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0",
+        "b9b16b46-c094-42ce-af67-173f3908fccd",
+        "98f74305-ba4c-4ae2-9e6d-561ca2f17e8a"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        { "type": "CONTENT", "data": "Show image /MapDownstairs2" },
+        {
+          "type": "DESC",
+          "data": "For Emma: The only difference with the other map is that this one has Val's dad in it."
+        }
+      ]
+    },
+    {
+      "key": "f6169895-f83f-4b92-b167-06c04ed08323",
+      "parentKey": "f68d38fd-f5a8-4295-af04-b61535f72499",
+      "subKeys": ["8d029772-0dc6-40ee-b3e3-accaccdd3c1a"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player in /MapTerritory chooses *Museum*,\nPlay /StoryVideo3"
+        }
+      ]
+    },
+    {
+      "key": "428c2edd-d717-42ae-a875-52819ca81459",
+      "parentKey": "d8a1faba-1ae7-4eb5-a790-83c210cf354a",
+      "subKeys": ["88b2a741-3980-42ef-8d20-9c917ae30d4b"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Show message:\n¡Definitivamente, ¡una obra de arte! Ahora sí: a la coronación."
+        }
+      ]
+    },
+    {
+      "key": "d8a1faba-1ae7-4eb5-a790-83c210cf354a",
+      "parentKey": "dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0",
+      "subKeys": ["428c2edd-d717-42ae-a875-52819ca81459"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *Owl statue*,\nShow image /MapDownstairs2"
+        }
+      ]
+    },
+    {
+      "key": "7368f6fd-1437-4356-bcf9-5f88228ff23f",
+      "parentKey": "e47dd72f-a112-4745-9945-63ca42aed89f",
+      "subKeys": ["7d04e146-c2c9-4d49-9a2f-594a31269682"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Send a notification\nwith message: \nEs hora de volver al castillo"
+        }
+      ]
+    },
+    {
+      "key": "dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0",
+      "parentKey": "85e3638c-05a0-4336-8295-8b052b1fb782",
+      "subKeys": [
+        "d8a1faba-1ae7-4eb5-a790-83c210cf354a",
+        "cac0e514-d66b-4b66-a804-989455f0f80f",
+        "ba8e2768-3283-4160-819f-3af98f55abdb"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door 1* (door closer to the book shelves),\nshow image /MapWorkshop2 (with sculptures)"
+        }
+      ]
+    },
+    {
+      "key": "5d3137e0-fa2f-4415-bca5-3d4b6dd958b3",
+      "parentKey": "05898def-82c0-4919-9c83-25ff4e80a7de",
+      "subKeys": ["e011d2ee-b8d3-419c-8366-5841d92724ee"],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Attestation" }]
+    },
+    {
+      "key": "f1117462-21e5-4e1d-ac8b-416b6e4601e0",
+      "parentKey": "746cdb5c-6d3c-43d1-ad1b-0cee4c6a0117",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Show image\n/Map Downstairs" }]
+    },
+    {
+      "key": "9acca0b9-76e7-4cb9-802e-5e80e249bf52",
+      "parentKey": "0df2f5f4-5ce6-43c5-9671-78f9acefca3f",
+      "subKeys": ["e47dd72f-a112-4745-9945-63ca42aed89f"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player selects /VideoLesson1,\nPlay video and enable notes on the bottom.\nThis could be in whatever way is easy for it \nto be programmed but some ideas are: \n1. That while the video plays player is able to \ntake notes at the same time or (if that's too much \nfor now), \n2. Let the player be able to switch \nbetween the video and the notes. without \nloosing progress on the video."
+        }
+      ]
+    },
+    {
+      "key": "e47dd72f-a112-4745-9945-63ca42aed89f",
+      "parentKey": "9acca0b9-76e7-4cb9-802e-5e80e249bf52",
+      "subKeys": ["7368f6fd-1437-4356-bcf9-5f88228ff23f"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Show necklace (progress bar) completed + 1/4 piece "
+        }
+      ]
+    },
+    {
+      "key": "11b0c1af-aafd-497e-b38f-f3549302c811",
+      "parentKey": "1bba4f77-2581-445b-b942-3f117ef7729d",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *main door* (door on right side of map),\nshow message: No debería salir de casa todavía. ¿Dónde está papá?"
+        }
+      ]
+    },
+    {
+      "key": "16717297-4c58-4f83-ad41-6445619a59fa",
+      "parentKey": "8d029772-0dc6-40ee-b3e3-accaccdd3c1a",
+      "subKeys": ["0df2f5f4-5ce6-43c5-9671-78f9acefca3f"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        { "type": "CONTENT", "data": "Attestation for finished activity" }
+      ]
+    },
+    {
+      "key": "88b2a741-3980-42ef-8d20-9c917ae30d4b",
+      "parentKey": "428c2edd-d717-42ae-a875-52819ca81459",
+      "subKeys": ["31f5b119-10f4-431f-a260-35d5b34ff780"],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Attestation" }]
+    },
+    {
+      "key": "1bba4f77-2581-445b-b942-3f117ef7729d",
+      "parentKey": "5f050da7-ccdc-4c5f-b17e-83c6d5981c05",
+      "subKeys": [
+        "e3c43fe5-a9c2-4942-8397-922710f1ec1a",
+        "e8e953b4-744f-41b0-a55c-77345f5e06fd",
+        "1fb1c2b0-0d74-4f13-ba4d-2a1aa92c7c78",
+        "11b0c1af-aafd-497e-b38f-f3549302c811"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door*: Show image /MapDownstairs"
+        }
+      ]
+    },
+    {
+      "key": "f68d38fd-f5a8-4295-af04-b61535f72499",
+      "parentKey": "300f05c5-ea91-4a5d-bfb8-59ad254dc8d4",
+      "subKeys": ["f6169895-f83f-4b92-b167-06c04ed08323"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Display all maps seen, lisiting\nthe most recent first."
+        }
+      ]
+    },
+    {
+      "key": "05898def-82c0-4919-9c83-25ff4e80a7de",
+      "parentKey": "31f5b119-10f4-431f-a260-35d5b34ff780",
+      "subKeys": ["5d3137e0-fa2f-4415-bca5-3d4b6dd958b3"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *castle*, \nshow /StoryVideo1"
+        }
+      ]
+    },
+    {
+      "key": "300f05c5-ea91-4a5d-bfb8-59ad254dc8d4",
+      "parentKey": "ce08f869-5b30-4e71-8617-7336cda7dd6b",
+      "subKeys": ["f68d38fd-f5a8-4295-af04-b61535f72499"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        { "type": "CONTENT", "data": "Show only *Maps feature* available" }
+      ]
+    },
+    {
+      "key": "e8e953b4-744f-41b0-a55c-77345f5e06fd",
+      "parentKey": "1bba4f77-2581-445b-b942-3f117ef7729d",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps If player taps *door 1* (door closer to the book shelves),\nshow image /MapWorkshop1 (empty)"
+        }
+      ]
+    },
+    {
+      "key": "ba8e2768-3283-4160-819f-3af98f55abdb",
+      "parentKey": "dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *door*, show message:\nNo puedo salir sin llevar una escultura."
+        }
+      ]
+    },
+    {
+      "key": "ae21d001-9e98-4827-b0de-0abb5c7ef354",
+      "parentKey": "31f5b119-10f4-431f-a260-35d5b34ff780",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *village*\nShow message:\nNo hay nadie en el pueblo, \nmejor voy al castillo para la coronación."
+        }
+      ]
+    },
+    {
+      "key": "59473fad-b00b-4721-8e33-a5734c28ba58",
+      "parentKey": "33a917e3-1a38-48b3-9ff0-51a2c852aede",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "The End" }]
+    },
+    {
+      "key": "5f050da7-ccdc-4c5f-b17e-83c6d5981c05",
+      "parentKey": "f73a4b1f-1c1c-45be-89d9-08ef256cfec9",
+      "subKeys": [
+        "1bba4f77-2581-445b-b942-3f117ef7729d",
+        "746cdb5c-6d3c-43d1-ad1b-0cee4c6a0117",
+        "85c089f9-3c96-45fa-9ecb-d1319bd5b945"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Show image \n/MapValRoom" }]
+    },
+    {
+      "key": "33a917e3-1a38-48b3-9ff0-51a2c852aede",
+      "parentKey": "7d04e146-c2c9-4d49-9a2f-594a31269682",
+      "subKeys": ["59473fad-b00b-4721-8e33-a5734c28ba58"],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Show /StoryVid. 5" }]
+    },
+    {
+      "key": "f73a4b1f-1c1c-45be-89d9-08ef256cfec9",
+      "parentKey": null,
+      "subKeys": ["5f050da7-ccdc-4c5f-b17e-83c6d5981c05"],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Intro Video\n(Val wakes up)" }]
+    },
+    {
+      "key": "e3c43fe5-a9c2-4942-8397-922710f1ec1a",
+      "parentKey": "1bba4f77-2581-445b-b942-3f117ef7729d",
+      "subKeys": ["c914290f-2ce3-4418-a674-17a27ba942aa"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *kitchen bar* : Show image /MapDownstairs2"
+        }
+      ]
+    },
+    {
+      "key": "bdf5f854-8d25-43c1-b2ec-00c28c03e112",
+      "parentKey": "cac0e514-d66b-4b66-a804-989455f0f80f",
+      "subKeys": ["596fa2be-f536-4433-b0ff-c157fd6dbfa5"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Show message: Pues no es la mejor que he visto, pero \ndebo irme ya si quiero llegar a tiempo. ¡A la coronación!"
+        }
+      ]
+    },
+    {
+      "key": "596fa2be-f536-4433-b0ff-c157fd6dbfa5",
+      "parentKey": "bdf5f854-8d25-43c1-b2ec-00c28c03e112",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [{ "type": "CONTENT", "data": "Attestation" }]
+    },
+    {
+      "key": "e011d2ee-b8d3-419c-8366-5841d92724ee",
+      "parentKey": "5d3137e0-fa2f-4415-bca5-3d4b6dd958b3",
+      "subKeys": ["d389231b-d214-409e-bfaf-a7febf327574"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Show message:\nMipha: Como puedes ver, es imprescendible la firma de este trato \ny sólo tu me puedes ayudar a salvar no sólo esta nación, sino ambas. \nLa guerra no puede continuar.\r\nMipha: si decides unirte, necesito que hagas la atestación con tu Marca de Vida\n y así sellar nuestro trato.  "
+        }
+      ]
+    },
+    {
+      "key": "7d04e146-c2c9-4d49-9a2f-594a31269682",
+      "parentKey": "7368f6fd-1437-4356-bcf9-5f88228ff23f",
+      "subKeys": ["33a917e3-1a38-48b3-9ff0-51a2c852aede"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Player has to open menu, maps, /MapTerritory, go back to the castle"
+        }
+      ]
+    },
+    {
+      "key": "8d029772-0dc6-40ee-b3e3-accaccdd3c1a",
+      "parentKey": "f6169895-f83f-4b92-b167-06c04ed08323",
+      "subKeys": ["16717297-4c58-4f83-ad41-6445619a59fa"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Museum activity:\nPlayer taps the words in the order in which they wish to\ncreate a frase. The idea is to rebuild the fountain using the \nold pieces that were broken off."
+        }
+      ]
+    },
+    {
+      "key": "ce08f869-5b30-4e71-8617-7336cda7dd6b",
+      "parentKey": "89d109a0-2b30-417b-98c1-756fe80fba78",
+      "subKeys": ["300f05c5-ea91-4a5d-bfb8-59ad254dc8d4"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        { "type": "CONTENT", "data": "If player chooses taps *Menu*" }
+      ]
+    },
+    {
+      "key": "31f5b119-10f4-431f-a260-35d5b34ff780",
+      "parentKey": "88b2a741-3980-42ef-8d20-9c917ae30d4b",
+      "subKeys": [
+        "05898def-82c0-4919-9c83-25ff4e80a7de",
+        "a7b7051a-d0e2-4467-b653-8bd65bb7bdd2",
+        "ae21d001-9e98-4827-b0de-0abb5c7ef354"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Fade out (if possible) into /MapTerritory"
+        }
+      ]
+    },
+    {
+      "key": "cac0e514-d66b-4b66-a804-989455f0f80f",
+      "parentKey": "dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0",
+      "subKeys": ["bdf5f854-8d25-43c1-b2ec-00c28c03e112"],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *any other statue*, \nshow image /MapDownstairs2"
+        }
+      ]
+    },
+    {
+      "key": "85c089f9-3c96-45fa-9ecb-d1319bd5b945",
+      "parentKey": "5f050da7-ccdc-4c5f-b17e-83c6d5981c05",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "If player taps *bed*\nshow message from Val: \n\"No me puedo quedar en cama. \nDebería ir a ver qué necesita papá.\""
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 2,
+    "theme": {
+      "name": "default",
+      "randomColor": true,
+      "background": "rgb(57,60,65)",
+      "highlightColor": "#50C9CE",
+      "marginH": 60,
+      "marginV": 20,
+      "contentStyle": { "lineHeight": "1.5" },
+      "linkStyle": { "lineRadius": 5, "lineType": "curve", "lineWidth": "3px" },
+      "rootTopic": {
+        "contentStyle": {
+          "fontSize": "34px",
+          "borderRadius": "35px",
+          "padding": "16px 18px 16px 18px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px",
+          "lineColor": "rgb(113, 203, 45)"
+        }
+      },
+      "primaryTopic": {
+        "contentStyle": {
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderRadius": "20px",
+          "fontSize": "17px",
+          "padding": "10px 15px 10px 15px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px",
+          "lineColor": "rgb(113, 203, 45)"
+        }
+      },
+      "normalTopic": {
+        "contentStyle": {
+          "border": "1px solid #e8eaec",
+          "borderRadius": "20px",
+          "fontSize": "17px",
+          "padding": "4px 10px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": "3px",
+          "lineColor": "white"
+        }
+      }
+    }
+  },
+  "formatVersion": null
+}
