@@ -17,7 +17,17 @@ export async function POST(req: NextRequest) {
   return Response.json(result, { status: 200 });
 }
 
-export async function GET() {
-  const result = engine.init();
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const currentKey = searchParams.get('currentKey');
+  
+  let result;
+  if (currentKey) {
+    const state: StoryState = { currentKey, stack: [] };
+    result = engine.step(state);
+  } else {
+    result = engine.init();
+  }
+  
   return Response.json(result, { status: 200 });
 }
