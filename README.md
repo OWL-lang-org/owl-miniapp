@@ -1,13 +1,3 @@
-<a name="readme-top"></a>
-
-<div align="center">
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-</div>
-
 <!-- PROJECT INTRO -->
 
 <!-- Notas:
@@ -23,11 +13,21 @@ https://i.ibb.co/3SfFDtB/photo-2024-08-04-13-42-00.jpg
 https://i.ibb.co/DL6z21c/2.png
 
  -->
+ <a name="readme-top"></a>
+
+<div align="center">
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+</div>
+
 
 <br />
 <div align="center">
-  <a href="https://github.com/OWLSuperhack/owl-backend">
-    <img src="https://i.ibb.co/nk2NBjF/Banner-para-Twitch-Gamer-Streaming-Atrevido-Lila.png">
+  <a href="https://github.com/OWL-lang-org/owl-miniapp">
+    <img src="https://i.ibb.co/PzvGT54S/Banner-para-Twitch-Gamer-Streaming-Atrevido-Lila-1.png">
   </a>
 
  <h3 align="center">🦉On-chain open world game to explore and learn through a creative storyline.🦉</h3>
