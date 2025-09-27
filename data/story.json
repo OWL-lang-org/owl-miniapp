@@ -482,7 +482,7 @@
       "subKeys": ["5f050da7-ccdc-4c5f-b17e-83c6d5981c05"],
       "collapse": false,
       "style": null,
-      "blocks": [{ "type": "CONTENT", "data": "Intro Video\n(Val wakes up)" }]
+      "blocks": [{ "type": "CONTENT", "data": "play intro" }]
     },
     {
       "key": "e3c43fe5-a9c2-4942-8397-922710f1ec1a",

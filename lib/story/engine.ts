@@ -86,7 +86,6 @@ const extractMessage = (s: string): string | undefined => {
 
 const extractFade = (s: string): { to?: string; direction?: 'in' | 'out' } | undefined => {
   const n = normalize(s);
-  // "Fade in to /MapDungeon", "Fade out (if possible) into /MapTerritory"
   const m = n.match(/\bfade\s+(in|out)[^\S\r\n]*(?:to|into)?[^\S\r\n]*\/?([A-Za-z0-9._/\-]+)?/i);
   if (m) return { direction: m[1].toLowerCase() as 'in' | 'out', to: m[2]?.trim() };
   return undefined;
@@ -148,11 +147,9 @@ function parseOutputsFromTopic(topic: Topic): Output[] {
       outs.push({ kind: 'attestation' });
       continue;
     }
-    // si no encaja nada, deja el texto como mensaje genérico o unknown
     if (!isChoiceText(text)) {
-      outs.push({ kind: 'message', text }); // preferible mostrarlo
+      outs.push({ kind: 'message', text });
     } else {
-      // es texto de choice, no lo emitimos como salida
     }
   }
   return outs;
@@ -164,7 +161,6 @@ function extractChoiceLabelFromTopic(topic: Topic): string | null {
     if (!isChoiceText(txt)) continue;
     const between = matchBetweenAsterisks(txt);
     if (between) return between;
-    // fallback: intenta leer algo razonable del bloque
     const m = txt.match(/If\s+player\s+(?:taps|chooses|selects)\s*([^,:\n]+)/i);
     if (m) return m[1].replace(/[\(\)]/g, '').trim();
   }
@@ -190,24 +186,20 @@ export class StoryEngine {
     );
   }
 
-  /** Estado inicial listo para ser mostrado (con auto‑avance). */
   init(): StepResult {
     const initState: StoryState = { currentKey: this.graph.rootTopicKey, stack: [] };
     return this.materialize(initState);
   }
 
-  /** Avanza una elección por label (o salto directo por key). */
   step(state: StoryState, input?: { choiceLabel?: string; toKey?: string }): StepResult {
     const current = this.topic(state.currentKey);
     if (!current) return this.materialize({ currentKey: this.graph.rootTopicKey, stack: [] });
 
-    // salto directo por key
     if (input?.toKey && this.byKey.has(input.toKey)) {
       const nextState: StoryState = { currentKey: input.toKey, stack: [...state.stack, state.currentKey] };
       return this.materialize(nextState);
     }
 
-    // resolvemos label → hijo
     const options = this.choicesFrom(current);
     const target = input?.choiceLabel
       ? options.find(c => c.label.toLowerCase() === input.choiceLabel!.toLowerCase())
@@ -218,11 +210,8 @@ export class StoryEngine {
       return this.materialize(nextState);
     }
 
-    // si no coincide nada, no cambiamos de estado; devolvemos lo actual
     return this.materialize(state);
   }
-
-  // =========== privados ===========
 
   private topic(key: string | null | undefined): Topic | undefined {
     if (!key) return undefined;
@@ -238,7 +227,6 @@ export class StoryEngine {
     return list?.[0];
   }
 
-  /** Construye las opciones desde los hijos inmediatos (basado en texto "If player taps *X*"). */
   private choicesFrom(topic: Topic): Choice[] {
     const choices: Choice[] = [];
     const subs = this.children.get(topic.key) ?? [];
@@ -246,7 +234,6 @@ export class StoryEngine {
       const child = this.topic(childKey);
       if (!child) continue;
       const label = extractChoiceLabelFromTopic(child) ?? this.fallbackLabel(child);
-      // destino: si el hijo se auto‑avanza por referencia única, usamos esa key de destino
       const dest = this.nextViaReference(child.key) ?? child.key;
       choices.push({ label, to: dest, key: child.key });
     }
@@ -256,22 +243,18 @@ export class StoryEngine {
   private fallbackLabel(t: Topic): string {
     const raw = normalize(t.blocks?.[0]?.data ?? '');
     if (!raw) return `option-${t.key.slice(0, 6)}`;
-    // intenta extraer un token útil
     const m = raw.match(/\/([A-Za-z0-9._\-]+)$/);
     return m?.[1] ?? raw.slice(0, 40);
   }
 
-  /** Sigue referencias y ramas lineales acumulando outputs hasta el próximo nodo con choices. */
   private materialize(state: StoryState): StepResult {
     const outputs: Output[] = [];
     let cursor = this.topic(state.currentKey);
 
-    // acumula outputs del nodo actual
     if (cursor) outputs.push(...parseOutputsFromTopic(cursor));
 
     const visited = new Set<string>([state.currentKey]);
 
-    // 1) seguir referencias (TOPIC_REFERENCE)
     while (cursor) {
       const viaRef = this.nextViaReference(cursor.key);
       if (viaRef && !visited.has(viaRef)) {
@@ -279,18 +262,14 @@ export class StoryEngine {
         if (!cursor) break;
         visited.add(cursor.key);
         outputs.push(...parseOutputsFromTopic(cursor));
-        // si llegamos a un nodo con choices, paramos
         if (this.isChoiceNode(cursor)) break;
-        // si este nodo ya expone múltiples hijos con texto de choice, paramos
         const couldChoose = this.choicesFrom(cursor);
         if (couldChoose.length > 0 && this.isChoiceNodeOfAnyChild(cursor)) break;
-        // si no, continúa
         continue;
       }
       break;
     }
 
-    // 2) auto‑avance por secuencia lineal (un hijo y no es nodo de "choice")
     let advanced = true;
     while (cursor && advanced) {
       advanced = false;
@@ -306,11 +285,9 @@ export class StoryEngine {
       }
     }
 
-    // Nodo final de parada para escoger
     const finalTopic = cursor ?? this.topic(state.currentKey)!;
     const choices = this.choicesFrom(finalTopic);
 
-    // fijamos el currentKey en la última posición alcanzada
     const newState: StoryState = { currentKey: finalTopic.key, stack: state.stack };
 
     return { state: newState, outputs, choices };
