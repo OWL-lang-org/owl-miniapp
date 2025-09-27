@@ -4,11 +4,11 @@ import { twMerge } from 'tailwind-merge';
 
 /**
  * This component is a simple page layout component to help with design consistency
- * Feel free to modify this component to fit your needs
+ * Modified for better miniapp compatibility - no height restrictions, full scrollability
  */
 export const Page = (props: { children: ReactNode; className?: string }) => {
   return (
-    <div className={twMerge(clsx('flex h-dvh flex-col', props.className))}>
+    <div className={twMerge(clsx('flex min-h-screen flex-col w-full overflow-y-auto', props.className))}>
       {props.children}
     </div>
   );
@@ -31,7 +31,7 @@ const Main = (props: { children: ReactNode; className?: string }) => {
   return (
     <main
       className={twMerge(
-        clsx('grow overflow-y-auto p-6 pt-3', props.className),
+        clsx('flex-1 p-6 pt-3 pb-8 min-h-0', props.className),
       )}
     >
       {props.children}

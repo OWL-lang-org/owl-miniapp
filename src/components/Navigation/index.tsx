@@ -1,7 +1,8 @@
 'use client';
 
 import { TabItem, Tabs } from '@worldcoin/mini-apps-ui-kit-react';
-import { Bank, Home, User } from 'iconoir-react';
+import { Home, User, Leaderboard } from 'iconoir-react';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 /**
@@ -13,13 +14,18 @@ import { useState } from 'react';
 
 export const Navigation = () => {
   const [value, setValue] = useState('home');
+  const router = useRouter();
+  const handleValueChange = (value: string) => {
+    setValue(value);
+    router.push(value);
+  };
 
   return (
-    <Tabs value={value} onValueChange={setValue}>
-      <TabItem value="home" icon={<Home />} label="Home" />
+    <Tabs value={value} onValueChange={handleValueChange}>
+      <TabItem value="home" icon={<Home />} label="Inicio" />
       {/* // TODO: These currently don't link anywhere */}
-      <TabItem value="wallet" icon={<Bank />} label="Wallet" />
-      <TabItem value="profile" icon={<User />} label="Profile" />
+      <TabItem value="stats" icon={<Leaderboard />} label="Estadísticas" />
+      <TabItem value="profile" icon={<User />} label="Perfil" />
     </Tabs>
   );
 };
