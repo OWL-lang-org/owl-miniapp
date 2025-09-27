@@ -3,15 +3,8 @@
 <!-- Notas:
 
 No olvidar conectar los repos o folders
-No olvidar subir el link del bot para test 
+No olvidar subir el link de la mini app
 No olvidar subir el link del demo 
-
-Agregar link a: View demo, report bug, request feature.
-
-https://i.ibb.co/3SfFDtB/photo-2024-08-04-13-42-00.jpg
-
-https://i.ibb.co/DL6z21c/2.png
-
  -->
  <a name="readme-top"></a>
 
@@ -57,10 +50,9 @@ https://i.ibb.co/DL6z21c/2.png
 
 1. [About de Project](#about-the-project)
 2. [Demo](#demo)
-3. [Built With](#built-with)
-4. [How it works](#how-it-works)
-5. [Team](#team)
-6. [Acknowledgments](#acknowledgments)
+3. [How it works](#how-it-works)
+4. [Team](#team)
+5. [Installation](#installation)
 
 <br />
 
@@ -73,16 +65,14 @@ https://i.ibb.co/DL6z21c/2.png
 <br />
 
 
-![OWL](https://i.ibb.co/0Zkb3fc/Learn-On-Chain.jpg)
+![OWL](https://i.ibb.co/1y3NnHj/1.jpg)
 
 
-OWL(Open World of Learning) is an innovative on-chain open-world game where players can explore and learn virtually any subject through a creative, immersive storyline. 
+OWL (Open World of Learning) is an on-chain open-world game inside a World Mini App where players can explore and learn almost any subject, starting with English classes for over [3 million World Mini Apps Spanish speakers across Latin America.](https://www.miniapps.world/country-ranks) 
 
-Designed to spark curiosity, OWL allows players to navigate the game at their own pace, making intuitive connections between concepts that enhance long-term memory. 
+It blends narrative and multimedia in an interactive journey that lets each player progress at their own pace, making intuitive connections that strengthen long-term memory.
 
-The learning experience is enriched with interactive elements delivered through a Telegram bot, combining narrative and multimedia to ensure a high-quality educational journey. 
-
-One of OWL’s unique features is that the main storyline remains flexible, unaffected by the order in which players choose to learn, with on-chain interactions seamlessly integrated into the gameplay, offering a true blend of education and adventure.
+Its flexible storyline adapts to any learning order, while seamless on-chain interactions add attestations along the way and include a user stake: players begin with an oath and a monetary commitment that is returned once their learning goals are achieved, reinforcing commitment to the game.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -90,9 +80,9 @@ One of OWL’s unique features is that the main storyline remains flexible, unaf
 
 # Demo
 
-[![Demo Video](https://i.ibb.co/B6RGzjm/fdsfsd.jpg)](https://youtu.be/nxBdHEU0fN0)
+<!--[![Demo Video](Video) -->
 
-Ready to explore? Chat with OWL Bot: https://t.me/OwlSuperHackBot
+<!-- Ready to explore? Chat with OWL Bot: https://t.me/OwlSuperHackBot -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
@@ -102,13 +92,8 @@ Ready to explore? Chat with OWL Bot: https://t.me/OwlSuperHackBot
 
 Game’s architecture integrates several key components to create a seamless and engaging experience for players.
 
-## Core Components
+## Key Components
 
-- **Telegram Bot:** The primary interface for players, where commands and interactions take place. It also verifies new wallets and manages on-chain attestations as players progress, ensuring a smooth integration with the blockchain.
-- **On-Chain Interactions:** OWL utilizes blockchain technology, specifically Base and Worldcoin, to offer seamless on-chain experiences. Players start by creating a new wallet, validated by the bot. As they advance in the storyline, they earn attestations on Base and unlock dynamic NFTs that evolve based on their progress.
-- **Dynamic NFTs:** Players are rewarded with dynamic NFTs as they achieve milestones in the game. These NFTs grow and change based on the attestations collected, serving as a visual representation of the player’s journey and accomplishments.
-- **Story-Driven Learning:** The game features a branching narrative that adapts to the player’s choices, allowing for a non-linear learning experience. The flexible storyline ensures that the order in which subjects are learned does not impact the overall experience, making each journey unique.
-- **Integration with World ID:** A side quest involves registering with World ID, which lays the foundation for unique user validation and future access to basic income rewards within the game.
 
 ## User Journey
 
@@ -120,22 +105,6 @@ Game’s architecture integrates several key components to create a seamless and
 
 Overall, OWL delivers an educational experience that is both engaging and immersive, with a strong emphasis on intuitive learning and the seamless integration of blockchain technology.
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-# Built With
-
-
-OWL is proudly supported by the following sponsors:
-
-
-* [![EAS Base][base.easscan]][easscan-url]
-* [![Base][base.org]][base-url]
-* [![Worldcoin][worldcoin.org]][worldcoin-url]
-* [![Blockscout][blockscout.com]][blockscout-url]
-
-These powerful partnershave enabled us to integrate cutting-edge technology, ensuring that OWL provides a truly innovative and engaging experience for all users.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,12 +123,7 @@ Sebastian Guaqueta ([@scguaquetam](https://twitter.com/scguaquetam)): Sr. Softwa
 Nicolas Vergara ([@champilas](https://x.com/champilas)): Backend Developer at [happ3n](https://x.com/happ3nxyz)
 <br />
 
-Angela Ocando ([@ocandocrypto](https://twitter.com/ocandocrypto)): Core Contributor at [Web3 Citizen](https://twitter.com/web3citizenxyz) and Arbitrum DAO Delegate.
-<br />
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- INstallation -->
 
@@ -248,18 +212,3 @@ By following these steps, you should be able to set up and run the project in a 
 [issues-shield]: https://img.shields.io/github/issues/OWL-lang-org/owl-miniapp.svg?style=for-the-badge&color=187f77
 
 [issues-url]: https://github.com/OWL-lang-org/owl-miniapp/issues
-
-
-<!-- SPONSORS  -->
-
-[base.easscan]: https://img.shields.io/badge/Base%20EAS-4c63b6?style=for-the-badge&logo=gnosispay&logoColor=white
-[easscan-url]:https://base.easscan.org/
-
-[base.org]:https://img.shields.io/badge/base-1953ef?style=for-the-badge&logo=gnosispay&logoColor=white
-[base-url]:https://www.base.org/
-
-[worldcoin.org]:https://img.shields.io/badge/Worldcoin-fd0320?style=for-the-badge&logo=gnosispay&logoColor=white
-[worldcoin-url]:https://worldcoin.org/
-
-[blockscout.com]:https://img.shields.io/badge/Blockscout-5453d3?style=for-the-badge&logo=gnosispay&logoColor=white
-[blockscout-url]:https://www.blockscout.com/
