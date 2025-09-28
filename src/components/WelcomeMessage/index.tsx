@@ -6,6 +6,11 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+interface UserStatusResponse {
+  status?: string;
+  address?: string;
+}
+
 export const WelcomeMessage = () => {
   const router = useRouter();
   const session = useSession();
@@ -39,7 +44,7 @@ export const WelcomeMessage = () => {
         cache: 'no-store'
       });
       
-      const userData = await response.json() as any;
+      const userData = await response.json() as UserStatusResponse;
       console.log('User status check response:', userData);
       
       if (userData.status) {

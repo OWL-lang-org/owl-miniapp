@@ -3,6 +3,15 @@ import { SimplifiedStoryEngine } from '../../../../lib/story/simplified-engine';
 import { auth } from '@/auth';
 import ky from 'ky';
 
+interface UserData {
+  storyProgress?: {
+    attestations: string[];
+    choices: Record<string, number>;
+    completedNodes: string[];
+  };
+  status?: string;
+}
+
 const engine = new SimplifiedStoryEngine();
 
 export async function GET(req: NextRequest) {
@@ -11,14 +20,18 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const currentKey = searchParams.get('currentKey');
     
-    let userProgress = { attestations: [], choices: {}, completedNodes: [] };
-    let userStatus = null;
+    let userProgress: { attestations: string[], choices: Record<string, number>, completedNodes: string[] } = { 
+      attestations: [], 
+      choices: {}, 
+      completedNodes: [] 
+    };
+    let userStatus: string | null = null;
     
     if (session?.user?.walletAddress) {
       try {
-        const userData = await ky.get(`${process.env.API_URL || 'http://localhost:3001'}/api/users/${session.user.walletAddress}`).json() as any;
+        const userData = await ky.get(`${process.env.API_URL || 'http://localhost:3001'}/api/users/${session.user.walletAddress}`).json() as UserData;
         userProgress = userData.storyProgress || userProgress;
-        userStatus = userData.status;
+        userStatus = userData.status || null;
       } catch (error) {
         console.warn('Failed to load user progress:', error);
       }
@@ -68,6 +81,7 @@ export async function POST(req: NextRequest) {
           userExists = true;
         } catch (error) {
           userExists = false;
+          console.warn('User does not exist:', error);
         }
 
         if (!userExists) {
