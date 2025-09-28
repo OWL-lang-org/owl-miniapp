@@ -86,25 +86,33 @@ Its flexible storyline adapts to any learning order, while seamless on-chain int
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
-
-
 # How it Works
+
+The game's design brings out the player's curiosity and then uses it to create a unique learning path/syllabus cronogram. It combines different learning methods like puzzles, repetition, in-context usage, integration of concepts from different CFR levels, explicit visual explanations, AI conversations and even note taking. 
+
+World not only facilitates a seamless in-app staking option per challenge to increase commitment and motivation, but it also verifies that a human has begun, is in the process of, or has completed an English course satisfactorily thus combating the three biggest blockers of online language learning in LATAM.
 
 Game’s architecture integrates several key components to create a seamless and engaging experience for players.
 
-## Key Components
+## Core Components:
 
+* Gamification
+* Learn to earn use-case
+* Open World gaming flow
+* Commitment staking in-app
+* Integrated wallet
+* PoH certifying completion of course
+* Seamless attestations as checkpoints
 
 ## User Journey
 
-- **Initial Setup:** Players begin by watching a video that guides them to create an EOA wallet (e.g., Metamask or Zerion), which becomes their digital identity in the game.
-- **First Command:** After setting up the wallet, players send their first command to begin their journey in the OWL universe.
-- **Story Progression:** Players navigate through the storyline, making choices that affect their path. The game adapts to these choices, ensuring a personalized learning experience, while unlocking on-chain interactions.
-- **Attestations and Rewards:** As players complete levels and milestones, they earn attestations and unlock dynamic NFTs or badges that reflect their progress and achievements.
-- **Side Quests:** Players can engage in side quests, such as registering with World ID, to explore additional aspects of the game and gain access to unique rewards.
+* **Initial Setup** : Players are asked if they would like to stake individually or as a group towards the completion of the English course.
+* **Inmersion video and learning interface** : Players are introduced to the story through inmersive story video that places them as the main character. They are then given two simple tasks to complete in order to learn how to navigate.
+* **Puzzles and challenges** : As they navigate the world, players are given the choice to go through challenges and puzzles specifically desgined to teach them English by forcing them to make their own conclusions based on what works and what doesn't. They learn at their own time and order, with their own connections and thus lock them into their long term memory. 
+* **Additional material** : Players will unlock explanational videos and they may choose to take notes of what they've learned as well as revisit practice mini-games, which, with AI, they can expect a virtually endless variety of materials.
+* **Story progression** : While the story progresses, the checkpoints manifest as attestations and players collect pieces of an NFT (which acts as their progress bar) to be minted at the end of the course.
 
 Overall, OWL delivers an educational experience that is both engaging and immersive, with a strong emphasis on intuitive learning and the seamless integration of blockchain technology.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
