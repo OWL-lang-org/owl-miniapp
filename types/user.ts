@@ -6,4 +6,9 @@ export interface IUser {
   createdAt: string;
   updatedAt: string;
   attestations: string[];
+  storyProgress?: {
+    attestations: any;
+    choices: any;
+    completedNodes: any;
+  };
 }

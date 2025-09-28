@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server';
 import { SimplifiedStoryEngine } from '../../../../lib/story/simplified-engine';
 import { auth } from '@/auth';
 import ky from 'ky';
+import { IUser } from '../../../../types/user';
 
 const engine = new SimplifiedStoryEngine();
 
@@ -16,11 +17,12 @@ export async function GET(req: NextRequest) {
     
     if (session?.user?.walletAddress) {
       try {
-        const userData = await ky.get(`${process.env.API_URL || 'http://localhost:3001'}/api/users/${session.user.walletAddress}`).json() as any;
+        const userData = await ky.get(`${process.env.API_URL || 'http://localhost:3001'}/api/users/${session.user.walletAddress}`).json() as IUser;
         userProgress = userData.storyProgress || userProgress;
         userStatus = userData.status;
       } catch (error) {
         console.warn('Failed to load user progress:', error);
+        throw error;
       }
     }
     
@@ -68,6 +70,7 @@ export async function POST(req: NextRequest) {
           userExists = true;
         } catch (error) {
           userExists = false;
+          throw error;
         }
 
         if (!userExists) {
@@ -86,6 +89,7 @@ export async function POST(req: NextRequest) {
         });
       } catch (error) {
         console.warn('Failed to save user progress:', error);
+        throw error;
       }
     }
     

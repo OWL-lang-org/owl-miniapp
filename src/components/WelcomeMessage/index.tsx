@@ -5,6 +5,7 @@ import ky from "ky";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IUser } from "../../../types/user";
 
 export const WelcomeMessage = () => {
   const router = useRouter();
@@ -39,7 +40,7 @@ export const WelcomeMessage = () => {
         cache: 'no-store'
       });
       
-      const userData = await response.json() as any;
+      const userData = await response.json() as IUser;
       console.log('User status check response:', userData);
       
       if (userData.status) {
