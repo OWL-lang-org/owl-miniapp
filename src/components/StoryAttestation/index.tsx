@@ -16,16 +16,21 @@ export const StoryAttestation = ({ nodeId, onComplete }: StoryAttestationProps) 
   useEffect(() => {
     const generateAttestation = async () => {
       try {
-        await fetch('/api/story/attestation', {
+        const response = await fetch('/api/users/create-attestation', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            nodeId,
-            timestamp: new Date().toISOString()
+            status: `story-node-${nodeId}`
           })
         });
         
-        setAttestationGenerated(true);
+        if (response.ok) {
+          const result = await response.json();
+          console.log('Attestation created:', result);
+          setAttestationGenerated(true);
+        } else {
+          throw new Error('Failed to create attestation');
+        }
       } catch (error) {
         console.error('Attestation generation error:', error);
         setError('Error al generar la atestación');

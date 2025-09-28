@@ -22,8 +22,6 @@ export default function OathPage() {
     setIsLoading(true);
     
     try {
-      //TODO include here the oath creation
-
       router.push('/story');
     } catch (error) {
       console.error('Error creating oath:', error);
