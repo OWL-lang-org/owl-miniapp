@@ -2,7 +2,6 @@ import { NextRequest } from 'next/server';
 import { SimplifiedStoryEngine } from '../../../../lib/story/simplified-engine';
 import { auth } from '@/auth';
 import ky from 'ky';
-import { IUser } from '../../../../types/user';
 
 interface UserData {
   storyProgress?: {
