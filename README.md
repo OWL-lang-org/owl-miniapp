@@ -98,6 +98,10 @@ Its flexible storyline adapts to any learning order, while seamless on-chain int
 
 <!-- Ready to explore? Chat with OWL Bot: https://t.me/OwlSuperHackBot -->
 
+<img src="QRMiniapp.png" alt="OWL Logo" style="width:100%; height: auto;" />
+
+### If You want to test the miniapp, you can do it by scanning this QR with your phone and it will install the miniapp on your Word App 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
 # How it Works
@@ -142,7 +146,7 @@ Natalia Emma Carvajal ([@nataliaemmaC](https://twitter.com/nataliaemmaC)): OWL F
 Sebastian Guaqueta ([@scguaquetam](https://twitter.com/scguaquetam)): Sr. Software Engineer at Rootstock , collaborator at [WTF Academy Contributor](https://twitter.com/WTFAcademy_).
 <br />
 
-Nicolas Vergara ([@champilas](https://x.com/champilas)): Backend Developer at [happ3n](https://x.com/happ3nxyz)
+Nicolas Vergara ([@champilas](https://x.com/champilas)): Backend Developer at [Tropykus](https://tropykus.com/home/) and [Betsell](https://www.betsell.com/es/)
 <br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
