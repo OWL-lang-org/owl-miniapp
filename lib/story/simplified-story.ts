@@ -341,9 +341,10 @@ export const owlStory: StoryNode[] = [
 
   {
     id: 'd389231b-d214-409e-bfaf-a7febf327574',
-    type: 'scene',
+    type: 'attestation',
+    title: 'Atestación con Mipha',
     content: {
-      messages: ['Haces la atestación y el botón brilla...']
+      attestation: true
     },
     autoAdvance: '063f730b-3e20-45fb-aeb6-8edc408a67dc'
   },
@@ -420,12 +421,24 @@ export const owlStory: StoryNode[] = [
 
   {
     id: '8d029772-0dc6-40ee-b3e3-accaccdd3c1a',
-    type: 'scene',
+    type: 'choice',
     title: 'Actividad del Museo',
     content: {
       messages: ['Actividad: Toca las palabras en el orden que desees para crear una frase. La idea es reconstruir la fuente usando las piezas rotas.']
     },
-    autoAdvance: '16717297-4c58-4f83-ad41-6445619a59fa'
+    choices: [
+      { text: '🏛️ Comenzar Actividad', nextNodeId: 'museum-activity' }
+    ]
+  },
+
+  {
+    id: 'museum-activity-return',
+    type: 'attestation',
+    title: 'Actividad completada',
+    content: {
+      attestation: true
+    },
+    autoAdvance: '0df2f5f4-5ce6-43c5-9671-78f9acefca3f'
   },
 
   {
