@@ -1,6 +1,5 @@
 'use client';
 
-import { Page } from '@/components/PageLayout';
 import { Button } from '@worldcoin/mini-apps-ui-kit-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -24,17 +23,6 @@ export default function OathPage() {
     
     try {
       //TODO include here the oath creation
-      //contract interaction
-
-      // await fetch('/api/user', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     address: session.user.walletAddress,
-      //     oathType: selectedType,
-      //     collateralAmount: selectedAmount,
-      //   }),
-      // });
 
       router.push('/story');
     } catch (error) {

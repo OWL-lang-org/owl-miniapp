@@ -1,34 +1,52 @@
 import { auth } from '@/auth';
 import { Page } from '@/components/PageLayout';
-import { Pay } from '@/components/Pay';
-import { Transaction } from '@/components/Transaction';
 import { UserInfo } from '@/components/UserInfo';
-import { Verify } from '@/components/Verify';
-import { ViewPermissions } from '@/components/ViewPermissions';
 import { WelcomeMessage } from '@/components/WelcomeMessage';
 import { Marble, TopBar } from '@worldcoin/mini-apps-ui-kit-react';
 import ky from 'ky';
+import { IUser } from '../../../../types/user';
+import { redirect } from 'next/navigation';
 
-async function checkUserExists(walletAddress: string): Promise<boolean> {
+async function checkUserStatus(walletAddress: string): Promise<{ shouldShowWelcome: boolean, shouldRedirectToStory: boolean }> {
   try {
-    const baseUrl = process.env.APP_BASE_URL;
-    
+    const baseUrl = process.env.NEXT_PUBLIC_APP_BASE_URL;
+    if (!baseUrl) {
+      throw new Error('BASE_URL is not set');
+    }
     const response = await ky.get(`${baseUrl}/api/user?address=${walletAddress}`, {
       cache: 'no-store'
     });
     
-    return response.ok;
+    const userData: IUser = await response.json();
+    console.log('User check response:', userData);
+    const hasStatus = userData?.status;
+    console.log('hasStatus:', hasStatus);
+    
+    if (hasStatus) {
+      return { shouldShowWelcome: false, shouldRedirectToStory: true };
+    } else {
+      return { shouldShowWelcome: true, shouldRedirectToStory: false };
+    }
   } catch (error) {
     console.error('Error checking user:', error);
-    return false;
+    return { shouldShowWelcome: true, shouldRedirectToStory: false };
   }
 }
 
 export default async function Home() {
   const session = await auth();
   
-  const userExists = session?.user?.walletAddress ? 
-    await checkUserExists(session.user.walletAddress) : false;
+  let shouldShowWelcome = false;
+  
+  if (session?.user?.walletAddress) {
+    const userStatus = await checkUserStatus(session.user.walletAddress);
+    
+    if (userStatus.shouldRedirectToStory) {
+      redirect('/story');
+    }
+    
+    shouldShowWelcome = userStatus.shouldShowWelcome;
+  }
 
   return (
     <>
@@ -46,7 +64,9 @@ export default async function Home() {
         />
       </Page.Header>
       <Page.Main className="flex flex-col items-center justify-start gap-4 mb-16">
-        {userExists ? (
+        {shouldShowWelcome ? (
+          <WelcomeMessage />
+        ) : (
           <>
             <UserInfo />
             {/* <Verify />
@@ -54,8 +74,6 @@ export default async function Home() {
             <Transaction />
             <ViewPermissions /> */}
           </>
-        ) : (
-          <WelcomeMessage />
         )}
       </Page.Main>
     </>

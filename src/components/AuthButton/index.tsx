@@ -61,7 +61,7 @@ export const AuthButton = () => {
         size="lg"
         variant="primary"
       >
-        {"Por favor, inicia sesión con tu billetera"}
+        {"Estamos verificando tu identidad, espera un momento..."}
       </Button>
     </LiveFeedback>
   );
