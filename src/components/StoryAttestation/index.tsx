@@ -1,8 +1,7 @@
 'use client';
 
 import { Button } from '@worldcoin/mini-apps-ui-kit-react';
-import { MiniKit } from '@worldcoin/minikit-js';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface StoryAttestationProps {
   nodeId: string;
@@ -10,70 +9,62 @@ interface StoryAttestationProps {
 }
 
 export const StoryAttestation = ({ nodeId, onComplete }: StoryAttestationProps) => {
-  const [isVerifying, setIsVerifying] = useState(false);
+  const [isGenerating, setIsGenerating] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [attestationGenerated, setAttestationGenerated] = useState(false);
 
-  const handleVerify = async () => {
-    if (isVerifying) return;
-    
-    setIsVerifying(true);
-    setError(null);
-
-    try {
-      const result = await MiniKit.commandsAsync.verify({
-        action: `complete-story-node-${nodeId}`,
-        signal: nodeId,
-      });
-
-      if (result.finalPayload.status === 'success') {
-        const verifyResponse = await fetch('/api/verify-proof', {
+  useEffect(() => {
+    const generateAttestation = async () => {
+      try {
+        await fetch('/api/story/attestation', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            payload: result.finalPayload,
-            action: `complete-story-node-${nodeId}`,
-            signal: nodeId,
-          }),
+            nodeId,
+            timestamp: new Date().toISOString()
+          })
         });
-
-        if (verifyResponse.ok) {
-          await fetch('/api/story/attestation', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              nodeId,
-              verificationResult: result.finalPayload
-            })
-          });
-          
-          onComplete();
-        } else {
-          setError('Verificación fallida en el servidor');
-        }
-      } else {
-        setError('Verificación cancelada o fallida');
+        
+        setAttestationGenerated(true);
+      } catch (error) {
+        console.error('Attestation generation error:', error);
+        setError('Error al generar la atestación');
+      } finally {
+        setIsGenerating(false);
       }
-    } catch (error) {
-      console.error('Attestation error:', error);
-      setError('Error durante la verificación');
-    } finally {
-      setIsVerifying(false);
-    }
+    };
+
+    generateAttestation();
+  }, [nodeId]);
+
+  const handleContinue = () => {
+    onComplete();
   };
 
   return (
     <div className="bg-gradient-to-r from-emerald-400/90 to-green-400/90 backdrop-blur-sm rounded-2xl shadow-lg p-6 border border-white/20">
       <div className="text-center">
         <div className="w-16 h-16 mx-auto mb-4 bg-emerald-600 rounded-full flex items-center justify-center">
-          <span className="text-2xl">⚑</span>
+          {isGenerating ? (
+            <div className="animate-spin w-8 h-8 border-2 border-white border-t-transparent rounded-full"></div>
+          ) : attestationGenerated ? (
+            <span className="text-2xl">✓</span>
+          ) : (
+            <span className="text-2xl">⚠️</span>
+          )}
         </div>
         
         <h3 className="text-emerald-900 font-bold text-lg mb-2">
-          Attestation Requerida
+          {isGenerating ? 'Generando Atestación...' : attestationGenerated ? 'Atestación Generada' : 'Error'}
         </h3>
         
         <p className="text-emerald-800 text-sm mb-6">
-          Completa tu verificación WorldCoin para continuar con la historia y desbloquear el siguiente capítulo.
+          {isGenerating 
+            ? 'Registrando tu progreso en la historia...'
+            : attestationGenerated 
+            ? 'Se ha registrado exitosamente tu progreso en este punto de la historia. ¡Puedes continuar!'
+            : 'Ha ocurrido un error al generar la atestación.'
+          }
         </p>
 
         {error && (
@@ -83,17 +74,17 @@ export const StoryAttestation = ({ nodeId, onComplete }: StoryAttestationProps) 
         )}
 
         <Button
-          onClick={handleVerify}
-          disabled={isVerifying}
+          onClick={handleContinue}
+          disabled={isGenerating}
           size="lg"
           variant="primary"
           className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3"
         >
-          {isVerifying ? 'Verificando...' : '🌟 Completar Verificación'}
+          {isGenerating ? 'Generando...' : '🌟 Continuar Historia'}
         </Button>
         
         <p className="text-emerald-700 text-xs mt-3">
-          Esta verificación confirma tu progreso y desbloquea contenido exclusivo.
+          Tu progreso ha sido registrado de forma segura en blockchain.
         </p>
       </div>
     </div>

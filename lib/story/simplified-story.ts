@@ -44,9 +44,9 @@ export const owlStory: StoryNode[] = [
       image: 'mapValRoom'
     },
     choices: [
-      { text: 'Tocar puerta', nextNodeId: '1bba4f77-2581-445b-b942-3f117ef7729d' },
-      { text: 'Tocar alfombra', nextNodeId: '746cdb5c-6d3c-43d1-ad1b-0cee4c6a0117' },
-      { text: 'Tocar cama', nextNodeId: '85c089f9-3c96-45fa-9ecb-d1319bd5b945' }
+      { text: 'Ir a la puerta', nextNodeId: '1bba4f77-2581-445b-b942-3f117ef7729d' },
+      { text: 'Tropezar con la alfombra', nextNodeId: '746cdb5c-6d3c-43d1-ad1b-0cee4c6a0117' },
+      { text: 'Estar en cama', nextNodeId: '85c089f9-3c96-45fa-9ecb-d1319bd5b945' }
     ]
   },
 
@@ -103,7 +103,7 @@ export const owlStory: StoryNode[] = [
     type: 'scene',
     title: 'Taller vacío',
     content: {
-      image: 'mapWorkshopEmpty'
+      image: 'workshopEmpty'
     },
     autoAdvance: '1bba4f77-2581-445b-b942-3f117ef7729d'
   },
@@ -159,9 +159,9 @@ export const owlStory: StoryNode[] = [
       image: 'mapDownstairs2'
     },
     choices: [
-      { text: 'Ir al taller', nextNodeId: 'dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0' },
-      { text: 'Habitación papá', nextNodeId: 'b9b16b46-c094-42ce-af67-173f3908fccd' },
-      { text: 'Intentar salir', nextNodeId: '98f74305-ba4c-4ae2-9e6d-561ca2f17e8a' }
+      { text: 'Puerta 1', nextNodeId: 'dbf8af7d-e7da-4af5-ba48-d9be57d1c6f0' },
+      { text: 'Puerta 2', nextNodeId: 'b9b16b46-c094-42ce-af67-173f3908fccd' },
+      { text: 'Puerta principal', nextNodeId: '98f74305-ba4c-4ae2-9e6d-561ca2f17e8a' }
     ]
   },
 
@@ -178,7 +178,7 @@ export const owlStory: StoryNode[] = [
     id: 'b9b16b46-c094-42ce-af67-173f3908fccd',
     type: 'scene',
     content: {
-      image: 'imageDadRoom'
+      image: 'mapDownstairs2'
     },
     autoAdvance: '5f7d1e29-713b-4497-940f-1af155f918c6'
   },
@@ -228,7 +228,7 @@ export const owlStory: StoryNode[] = [
     id: '428c2edd-d717-42ae-a875-52819ca81459',
     type: 'scene',
     content: {
-      messages: ['¡Definitivamente, una obra de arte! Ahora sí: a la coronación.']
+      messages: ['¡Definitivamente, ¡una obra de arte! Ahora sí: a la coronación.']
     },
     autoAdvance: '88b2a741-3980-42ef-8d20-9c917ae30d4b'
   },
@@ -309,7 +309,7 @@ export const owlStory: StoryNode[] = [
     type: 'scene',
     title: 'Llegada al castillo',
     content: {
-      video: 'videoBackstory'
+      video: 'StoryVideo1'
     },
     autoAdvance: '5d3137e0-fa2f-4415-bca5-3d4b6dd958b3'
   },
