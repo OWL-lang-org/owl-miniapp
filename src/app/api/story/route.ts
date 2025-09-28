@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server';
 import { SimplifiedStoryEngine } from '../../../../lib/story/simplified-engine';
 import { auth } from '@/auth';
 import ky from 'ky';
+import { IUser } from '../../../../types/user';
 
 interface UserData {
   storyProgress?: {
@@ -34,6 +35,7 @@ export async function GET(req: NextRequest) {
         userStatus = userData.status || null;
       } catch (error) {
         console.warn('Failed to load user progress:', error);
+        throw error;
       }
     }
     
@@ -100,6 +102,7 @@ export async function POST(req: NextRequest) {
         });
       } catch (error) {
         console.warn('Failed to save user progress:', error);
+        throw error;
       }
     }
     
